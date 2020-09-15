@@ -2,7 +2,9 @@
 @section('content')
      <!-- ============================================================== -->
             <!-- Start right Content here -->
-            <!-- ============================================================== -->                      
+            <!-- ============================================================== -->                    
+            <div id="layoutSidenav">
+            <div id="layoutSidenav_content">  
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
@@ -13,7 +15,6 @@
                             <div class="col-sm-12">
                                 <h4 class="pull-left page-title">Invoice</h4>
                                 <ol class="breadcrumb pull-right">
-                                    <li><a href="#">Echovel</a></li>
                                     <li><a href="#">Pages</a></li>
                                     <li class="active">Invoice</li>
                                 </ol>
