@@ -5,21 +5,12 @@
 <div class="content-page">
   <div class="content">
         <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome !</h4>
-                    <ol class="breadcrumb pull-right">
-                    </ol>
-                </div>
-            </div>
-         
 
             <!-- Start Widget -->
             <div class="row">
 	          <div class="col-md-12">
 	              <div class="panel panel-default">
-	                  <div class="panel-heading">
+	                  <div class="panel-heading pt-3">
 	                      <h3 class="panel-title text-danger">{{ date("Y") }} All Expense 
 	                      </h3>
 	                  </div>

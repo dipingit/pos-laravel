@@ -3,16 +3,6 @@
 <div class="content-page">
   <div class="content">
         <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome !</h4>
-                    <ol class="breadcrumb pull-right">
-                        <li><a href="#">Echobvel</a></li>
-                        <li class="active">IT</li>
-                    </ol>
-                </div>
-            </div>
 
             <!-- Start Widget -->
             <div class="row">

@@ -3,16 +3,7 @@
 <div class="content-page">
   <div class="content">
         <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome !</h4>
-                    <ol class="breadcrumb pull-right">
-                        <li><a href="#">Echobvel</a></li>
-                        <li class="active">IT</li>
-                    </ol>
-                </div>
-            </div>
+      
 
             <!-- Start Widget -->
             <div class="row">
@@ -20,7 +11,7 @@
 	           <div class="col-md-2"></div>
                 <div class="col-md-8 ">
                     <div class="panel panel-info">
-                        <div class="panel-heading"><h3 class="panel-title text-white">Category</h3>
+                        <div class="panel-heading pt-5"><h3 class="panel-title text-white">Category</h3>
 
                         </div>
                         <a href="{{ route('all.category') }}" class="pull-right btn btn-danger btn-sm">All Category</a>

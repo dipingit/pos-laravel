@@ -9,6 +9,7 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 //EMPLOYEE ROUTES ARE HERE--------------------
 Route::get('/add-employee', 'EmployeeController@index')->name('add.employee');
 Route::post('/insert-employee','EmployeeController@store');
@@ -42,7 +43,7 @@ Route::post('/insert-advancedsalary','SalaryController@InsertAdvanced');
 Route::get('/all-advenced-salary', 'SalaryController@AllSalary')->name('all.advancedsalary');
 Route::get('/pay-salary', 'SalaryController@PaySalary')->name('pay.salary');
 
-//category rputes here------------
+//category routes here------------
 Route::get('/add-category','SalaryController@AddCategory')->name('add.category');
 Route::post('/insert-category','SalaryController@InsertCategory');
 Route::get('/all-catgory', 'SalaryController@AllCategory')->name('all.category');
@@ -72,7 +73,7 @@ Route::get('/edit-today-expense/{id}', 'ExpenseController@EditTodayExpense');
 Route::post('/update-expense/{id}','ExpenseController@UpdateExpense');
 Route::get('/monthly-expense','ExpenseController@MonthlyExpense')->name('monthly.expense');
 Route::get('/yearly-expense','ExpenseController@YearlyExpense')->name('yearly.expense');
-//monthly more expenses----
+//monthly expenses----
 Route::get('/january-expense','ExpenseController@JanuaryExpense')->name('january.expense');
 Route::get('/february-expense','ExpenseController@FebruaryExpense')->name('february.expense');
 Route::get('/march-expense','ExpenseController@MarchExpense')->name('march.expense');

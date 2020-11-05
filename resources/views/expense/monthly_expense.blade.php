@@ -4,15 +4,7 @@
     <div id="layoutSidenav_content">
 
   	<div class="content">
-        <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome ! {{ date("Y") }}</h4>
-                    <ol class="breadcrumb pull-right">
-                    </ol>
-                </div>
-            </div>
+        <div class="container pt-3">
          
            <div>
            <a href="{{ route('january.expense') }}" class="btn btn-sm btn-info">January</a>
@@ -33,7 +25,7 @@
 	          <div class="col-md-12">
 	              <div class="panel panel-default">
 	                  <div class="panel-heading">
-	                      <h3 class="panel-title text-danger"> Monthly Expense
+	                      <h3 class="panel-title text-danger pt-2"> Monthly Expense
 	                      </h3>
 	                  </div>
 	                  <div class="panel-body">

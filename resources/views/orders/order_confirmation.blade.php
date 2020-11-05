@@ -13,10 +13,8 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="pull-left page-title">Invoice</h4>
-                                <ol class="breadcrumb pull-right">
-                                    <li class="active">Invoice</li>
-                                </ol>
+                                <h4 class="pull-left page-title pt-2">Invoice</h4>
+                             <hr>
                             </div>
                         </div>
 

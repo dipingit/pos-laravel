@@ -68,31 +68,32 @@
                     <div class="sb-sidenav-menu" >
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="{{ route('home') }}">
+                            {{-- <a class="nav-link" href="{{ route('home') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
-                            </a>
+                            </a> --}}
                             <a class="nav-link bg-info" href="{{ route('pos') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt text-white"></i></div>
                                  <span class ="text-white"> POS </span>
                             </a>
+                            
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-folder"></i></div>
                                 Employee
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <div class="collapse {{ \Request::is('add-employee') ? 'show' : '' || \Request::is('all-employee') ? 'show' : ''   }}" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <li><a class="nav-link" href="{{ route('add.employee') }}">Add Employee</a></li>
-                                    <li><a class="nav-link" href="{{ route('all.employee') }}">All Employee</a></li>
+                                    <a class="nav-link "  href="{{ route('add.employee') }}">Add Employee</a>
+                                    <a class="nav-link" href="{{ route('all.employee') }}">All Employee</a>
                                 </nav>
-                            </div>
+                        </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-folder"></i></div>
                                 Customer
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                                <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <div class="collapse {{ \Request::is('add-customer') ? 'show' : '' || \Request::is('all-customer') ? 'show' : ''   }}" id="collapseLayouts2" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('add.customer') }}">Add Customers</a>
                                     <a class="nav-link" href="{{ route('all.customer') }}">All Customer</a>
@@ -103,7 +104,7 @@
                                 Suppliers
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                                <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <div class="collapse {{ \Request::is('add-supplier') ? 'show' : '' || \Request::is('all-supplier') ? 'show' : ''   }}" id="collapseLayouts3" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('add.supplier') }}">Add Supplier</a>
                                     <a class="nav-link" href="{{ route('all.supplier') }}">All Supplier</a>
@@ -114,7 +115,7 @@
                                 Salary(EMP)
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapsePages3" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <div class="collapse {{ \Request::is('add-advenced-salary') ? 'show' : '' || \Request::is('all-advenced-salary') ? 'show' : '' || \Request::is('pay-salary') ? 'show' : '' || \Request::is('last-month-salary') ? 'show' : ''  }}" id="collapsePages3" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                      <li><a class="nav-link" href="{{ route('add.advancedsalary') }}">Add Advanced Salary</a></li>
                                     <li><a class="nav-link" href="{{ route('all.advancedsalary') }}">All Advanced Salary</a></li>
@@ -127,7 +128,7 @@
                                         Categories
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="collapsePages4" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
+                                    <div class="collapse {{ \Request::is('add-category') ? 'show' : '' || \Request::is('all-catgory') ? 'show' : ''   }}" id="collapsePages4" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                             <a class="nav-link collapsed" href="{{ route('add.category') }}">
                                                 Add Category
@@ -142,10 +143,10 @@
                                         Products
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="collapsePages5" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
+                                    <div class="collapse {{ \Request::is('add-product') ? 'show' : '' || \Request::is('all-product') ? 'show' : '' || \Request::is('import-product') ? 'show' : ''}}" id="collapsePages5" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                              <a class="nav-link collapsed" href="{{ route('add.product') }}">Add Product</a>
-                                            <a class="nav-link collapsed" href="{{ route('all.product') }}">All Product</a>
+                                            <a class="nav-link collapsed" href="{{ route('all.product') }}">All Products</a>
                                             <a class="nav-link collapsed" href="{{ route('import.product') }}">Import Product</a>
                                         </nav>
                                     </div>
@@ -154,7 +155,7 @@
                                         Expense
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="collapsePages6" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
+                                    <div class="collapse {{ \Request::is('add-expense') ? 'show' : '' || \Request::is('today-expense') ? 'show' : '' || \Request::is('monthly-expense') ? 'show' : '' || \Request::is('yearly-expense') ? 'show' : ''}}" id="collapsePages6" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                             <a class="nav-link collapsed" href="{{ route('add.expense') }}">Add New</a>    
                                             <a class="nav-link collapsed" href="{{ route('today.expense') }}">Today Expense</a>    
@@ -168,7 +169,7 @@
                                         Orders
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="collapsePages7" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
+                                    <div class="collapse {{ \Request::is('pending/order') ? 'show' : '' || \Request::is('success/order') ? 'show' : ''   }}" id="collapsePages7" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                            <a class="nav-link collapsed" href="{{ route('pending.orders') }}">Pending Orders</a>
                                            <a class="nav-link collapsed" href="{{ route('success.orders') }}">Success Orders</a>    
@@ -180,28 +181,28 @@
                                         Sales Report
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="collapsePages8" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
+                                    <div class="collapse {{ \Request::is('add.customer') ? 'show' : '' || \Request::is('all.customer') ? 'show' : ''   }}" id="collapsePages8" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                            <router-link class="nav-link collapsed" to="/order" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                            <a class="nav-link collapsed" to="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                                 First
-                                            </router-link>
-                                            <router-link class="nav-link collapsed" to="/searchorder" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                            </a>
+                                            <a class="nav-link collapsed" to="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                                 Second
-                                            </router-link>
+                                            </a>
                                         </nav>
                                     </div>
 
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages9" aria-expanded="false" aria-controls="collapsePages">
+                            {{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages9" aria-expanded="false" aria-controls="collapsePages">
                                         <div class="sb-nav-link-icon"><i class="fas fa-folder"></i></div>
                                         Attendance
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="collapsePages9" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
+                                    <div class="collapse {{ \Request::is('take-attendence') ? 'show' : '' || \Request::is('all-attendence') ? 'show' : ''   }}" id="collapsePages9" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
                                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                             <a class="nav-link collapsed" href="{{ route('take.attendence') }}">Take Attendance</a>
                                              <a class="nav-link collapsed" href="{{ route('all.attendence') }}">All Attendances</a>
                                         </nav>
-                                    </div>
+                                    </div> --}}
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

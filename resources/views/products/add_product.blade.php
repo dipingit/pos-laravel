@@ -3,23 +3,12 @@
 <div class="content-page">
   <div class="content">
         <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome !</h4>
-                    <ol class="breadcrumb pull-right">
-                        <li><a href="#">Echobvel</a></li>
-                        <li class="active">IT</li>
-                    </ol>
-                </div>
-            </div>
-
             <!-- Start Widget -->
             <div class="row">
 	           <!-- Basic example -->
 	           <div class="col-md-2"></div>
-                <div class="col-md-8 ">
-                    <div class="panel panel-default">
+                <div class="col-md-8 pt-4">
+                    <div class="panel panel-default pt-5">
                         <div class="panel-heading"><h3 class="panel-title">Add Product
                             <a href="{{ route('import.product') }}" class="btn btn-sm btn-danger pull-right">Import Product</a></h3></div>
                         @if ($errors->any())
@@ -65,7 +54,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword18">Godaun</label>
+                                    <label for="exampleInputPassword18">Godown</label>
                                     <input type="text" class="form-control" name="product_garage" placeholder="Godown Number" required>
                                 </div>
                                 <div class="form-group">

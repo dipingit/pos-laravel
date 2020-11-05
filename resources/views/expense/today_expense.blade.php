@@ -2,14 +2,6 @@
 @section('content')
 <div id="layoutSidenav">
     <div id="layoutSidenav_content">
-	<ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Today's Expense</li>
-        </ol>
-        <!-- Icon Cards-->
-       <
             @php
             $date= date("d/m/y");
             $expense=DB::Table('expenses')->where('date',$date)->sum('amount');

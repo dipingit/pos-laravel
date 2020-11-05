@@ -2,12 +2,6 @@
 @section('content')
 <div id="layoutSidenav">
     <div id="layoutSidenav_content">
-	<ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">All Products</li>
-        </ol>
         <!-- Icon Cards-->
        <div class="row container pt-5">
          <div class="card col-lg-12">

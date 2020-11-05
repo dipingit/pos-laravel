@@ -12,25 +12,19 @@
 
                         <!-- Page-Title -->
                         <div class="row">
-                            <div class="col-sm-12">
-                                <h4 class="pull-left page-title">Invoice</h4>
-                                <ol class="breadcrumb pull-right">
-                                    <li><a href="#">Pages</a></li>
-                                    <li class="active">Invoice</li>
-                                </ol>
+                            <div class="col-sm-12 mt-5">
+                              
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4>Invoice</h4>
-                                    </div>
+                                    
                                     <div class="panel-body">
                                         <div class="clearfix">
                                             <div class="pull-left">
-                                                <h4 class="text-right">Echovel</h4>
+                                                
                                                 
                                             </div>
                                             <div class="pull-right">
@@ -95,13 +89,13 @@
                                         <div class="row" style="border-radius: 0px;">
                                             <div class="col-md-3 col-md-offset-9">
                                                 <p class="text-right"><b>Sub-total:</b> {{ Cart::subtotal() }}</p>
-                                                <p class="text-right">VAT{{ Cart::tax() }}</p>
+                                                <p class="text-right"><b>VAT:</b> {{ Cart::tax() }}</p>
                                                 <hr>
                                                 <h3 class="text-right">Total: {{ Cart::total() }}</h3>
                                             </div>
                                         </div>
                                         <hr>
-                                        <div class="hidden-print">
+                                        <div class="hidden-print mb-5">
                                             <div class="pull-right">
                                                 <a href="#" onclick="window.print()" class="btn btn-inverse waves-effect waves-light"><i class="fa fa-print"></i></a>
                                                 <a href="#"  class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal">Submit</a>

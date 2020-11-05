@@ -5,19 +5,11 @@
 <div class="content-page">
   <div class="content">
         <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome!</h4>
-                    <ol class="breadcrumb pull-right">
-                    </ol>
-                </div>
-            </div>
 
             <!-- Start Widget -->
             <div class="row">
 	          <div class="col-md-12">
-	              <div class="panel panel-default">
+	              <div class="panel panel-default pt-2">
 	                  <div class="panel-heading">
 	                      <h3 class="panel-title">Take Attendence  <a href="{{ route('all.attendence') }}" class="btn btn-sm btn-info pull-right">All Attendence</a></h3>
 	                  </div>

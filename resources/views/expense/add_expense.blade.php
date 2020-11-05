@@ -3,23 +3,13 @@
 <div class="content-page">
   <div class="content">
         <div class="container">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4 class="pull-left page-title">Welcome !</h4>
-                    <ol class="breadcrumb pull-right">
-                        <li><a href="#">Echobvel</a></li>
-                        <li class="active">IT</li>
-                    </ol>
-                </div>
-            </div>
 
             <!-- Start Widget -->
             <div class="row">
 	           <!-- Basic example -->
 	           <div class="col-md-2"></div>
-                <div class="col-md-8 ">
-                    <div class="panel panel-default">
+                <div class="col-md-8 pt-5">
+                    <div class="panel panel-default pt-5">
                         <div class="panel-heading"><h3 class="panel-title">Add Expense
                         	<a href="{{ route('today.expense') }}" class="btn btn-sm btn-danger pull-right">Today </a>
                         	<a href="{{ route('monthly.expense') }}" class="btn btn-sm btn-info pull-right">This Month </a>
@@ -55,7 +45,7 @@
                                    <input type="hidden" class="form-control" name="month" value=" {{ date("F") }}">
                                    <input type="hidden" class="form-control" name="year" value=" {{ date("Y") }}">
                                 </div>
-                                <button type="submit" class="btn btn-purple waves-effect waves-light">Submit</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </form>
                         </div><!-- panel-body -->
                     </div> <!-- panel -->
